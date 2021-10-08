@@ -1,13 +1,83 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.home{
+  color: #ffeeb5;
+  text-align: center;
+  height: 100vh;
+  background-image: linear-gradient(to right, rgb(0, 3, 10) , rgb(8, 0, 68));
+}
+
+
+.congrats{
+  margin: 10% 0;
+}
+
+.welcome{
+  color: gray;
+  margin: 10% 0;
+}
+
+@media screen and ( max-width: 1030px ) {
+  .welcome{
+    font-size: 180%;
+    margin: 10% 0;
+  }  
+}
+
+@media screen and ( max-width: 930px ) {
+  .welcome{
+    font-size: 170%;
+    margin: 10% 0;
+  }  
+}
+
+
+@media screen and ( max-width: 900px ) {
+  .welcome{
+    font-size: 5vw;
+    margin: 10% 0;
+  }  
+}
+
+@keyframes setRole {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+  
+}
+
+.role {
+  color: rgb(218, 62, 6);
+  animation: setRole 3s ease-in-out 0s infinite ;
+  margin: 10% 0;
+}
+
+.light{
+  position: absolute;
+  animation: setRole 1s ease-in-out 3s infinite ;
+}
+
+.services{
+  height: 100vh;
+  text-align: center;
+  
+}
+
+.portfolio{
+  height: 100vh;
+  text-align: center;
+}
+
+.contact{
+  height: 100vh;
+  text-align: center;
 }
