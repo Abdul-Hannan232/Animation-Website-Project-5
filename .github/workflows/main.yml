@@ -1,0 +1,33 @@
+name: CI
+
+on:
+
+  push:
+    branches: [ master ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    
+      - uses: actions/checkout@v2
+
+      - name: Install NodeJS
+        uses: actions/setup-node@v2-beta
+        with:
+          version: 14
+
+      - name: Install Dependencies
+        run: npm install
+        
+      - name: Create Build
+        run: npm run build
+        
+      - name: Install Surge
+        run: npm install -g surge
+      
+      - name: Deploy on Surge
+        run: surge ./build http://portfolio-abdul-hannan.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
